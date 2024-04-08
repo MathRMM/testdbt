@@ -2,6 +2,13 @@ Welcome to your new dbt project!
 
 ### Using the starter project
 
+CONFIGURAR ESSE BANCO:
+Hostname: dpg-co9l3pa0si5c739ef67g-a.oregon-postgres.render.com
+Password: r1vfKU7wLA1BzqtnHmyn4QU8VS7rnYnU
+Username: testdb_xr34_user
+Database: testdb_xr34
+Schema: testdbt_curated
+
 Try running the following commands:
 - dbt run
 - dbt test
