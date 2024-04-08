@@ -1,4 +1,4 @@
-version: 2
+https://docs.getdbt.com/docs/core/pip-installversion: 2
 
 sources:
   - name: testdbt
