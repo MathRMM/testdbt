@@ -1,0 +1,79 @@
+version: 2
+
+sources:
+  - name: testdbt
+    schema: testdbt
+    tables:
+      - name: clientes
+        description: "Tabela contendo informações sobre os clientes."
+        columns:
+          - name: id_cliente
+            description: "Identificador único do cliente."
+          - name: nome
+            description: "Nome do cliente."
+          - name: email
+            description: "Email do cliente, único."
+          - name: data_cadastro
+            description: "Data em que o cliente foi cadastrado no sistema."
+          - name: cidade
+            description: "Cidade do cliente."
+          - name: estado
+            description: "Estado do cliente."
+          - name: pais
+            description: "País do cliente."
+
+      - name: produtos
+        description: "Tabela contendo informações sobre os produtos."
+        columns:
+          - name: id_produto
+            description: "Identificador único do produto."
+          - name: nome
+            description: "Nome do produto."
+          - name: categoria
+            description: "Categoria do produto."
+          - name: preco_unitario
+            description: "Preço unitário do produto."
+          - name: estoque
+            description: "Quantidade de estoque do produto."
+
+      - name: pedidos
+        description: "Tabela contendo informações sobre os pedidos feitos pelos clientes."
+        columns:
+          - name: id_pedido
+            description: "Identificador único do pedido."
+          - name: id_cliente
+            description: "Identificador do cliente que realizou o pedido."
+          - name: data_pedido
+            description: "Data em que o pedido foi realizado."
+          - name: status
+            description: "Status do pedido."
+
+      - name: detalhes_pedidos
+        description: "Tabela contendo detalhes sobre os itens específicos em cada pedido."
+        columns:
+          - name: id_detalhe
+            description: "Identificador único do detalhe do pedido."
+          - name: id_pedido
+            description: "Identificador do pedido associado."
+          - name: id_produto
+            description: "Identificador do produto pedido."
+          - name: quantidade
+            description: "Quantidade do produto pedido."
+          - name: preco
+            description: "Preço do produto pedido."
+
+      - name: feedback_clientes
+        description: "Tabela de feedback fornecido pelos clientes sobre os pedidos."
+        columns:
+          - name: id_feedback
+            description: "Identificador único do feedback."
+          - name: id_cliente
+            description: "Identificador do cliente que forneceu o feedback."
+          - name: id_pedido
+            description: "Identificador do pedido sobre o qual o feedback foi fornecido."
+          - name: data_feedback
+            description: "Data em que o feedback foi fornecido."
+          - name: comentario
+            description: "Comentário de feedback."
+          - name: avaliacao
+            description: "Avaliação numérica do feedback."

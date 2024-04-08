@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: agregacao_pedidos
+    description: "Agrega informações dos pedidos e detalhes dos pedidos, calculando o total gasto por pedido."
+    columns:
+      - name: id_pedido
+        description: "Identificador único do pedido."
+        tests:
+          - unique
+          - not_null
+      - name: id_cliente
+        description: "Identificador do cliente que fez o pedido."
+        tests:
+          - not_null
+      - name: data_pedido
+        description: "Data em que o pedido foi feito."
+        tests:
+          - not_null
+      - name: total_pedido
+        description: "Total monetário do pedido."
+        tests:
+          - not_null
+
+  - name: pedidos
+    description: "Representa a tabela de pedidos do banco de dados de produção."
+    columns:
+      - name: id_pedido
+        description: "Identificador único do pedido."
+        tests:
+          - unique
+          - not_null
+      - name: id_cliente
+        description: "Identificador do cliente que realizou o pedido."
+        tests:
+          - not_null
+      - name: data_pedido
+        description: "Data em que o pedido foi realizado."
+        tests:
+          - not_null
+      - name: status
+        description: "Status atual do pedido."
+        tests:
+          - not_null

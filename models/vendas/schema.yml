@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: vendas_por_produto
+    description: "Este modelo agrega dados de vendas por produto, incluindo a quantidade vendida, valor total das vendas, categoria do produto, preço unitário e estoque disponível."
+    columns:
+      - name: id_produto
+        description: "Identificador único do produto."
+        tests:
+          - unique
+          - not_null
+      - name: nome_produto
+        description: "Nome do produto."
+        tests:
+          - not_null
+      - name: quantidade_vendida
+        description: "Quantidade total de produtos vendidos."
+        tests:
+          - not_null
+      - name: valor_total_vendas
+        description: "Valor total das vendas para o produto."
+        tests:
+          - not_null
+      - name: categoria
+        description: "Categoria do produto."
+        tests:
+          - not_null
+      - name: preco_unitario
+        description: "Preço unitário do produto."
+        tests:
+          - not_null
+      - name: estoque
+        description: "Quantidade de produtos disponíveis em estoque."
+        tests:
+          - not_null
+          
+  - name: analise_retencao_clientes
+    description: "Este modelo incrementa a análise da retenção de clientes, identificando a data da primeira e da segunda compra para cada cliente."
+    columns:
+      - name: id_cliente
+        description: "Identificador único do cliente."
+        tests:
+          - unique
+          - not_null
+
+      - name: data_primeira_compra
+        description: "Data da primeira compra realizada pelo cliente."
+        tests:
+          - not_null
+
+      - name: data_segunda_compra
+        description: "Data da segunda compra realizada pelo cliente. Pode ser nulo se o cliente não realizou uma segunda compra."
+        tests:
+          - not_null:
+              when: "this.data_segunda_compra is not null"  # Este teste verifica se a coluna não é nula, apenas quando existe uma segunda compra registrada.
