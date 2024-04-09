@@ -2,7 +2,7 @@ Welcome to your new dbt project!
 
 ### Using the starter project
 
-CONFIGURAR ESSE BANCO
+##PARA USAR O DBT UTILIZE ESSE BANCO JÁ POPULADO
 
 Hostname: dpg-co9l3pa0si5c739ef67g-a.oregon-postgres.render.com
 
