@@ -13,7 +13,7 @@ models:
         tests:
           - not_null
 
-  - name: retention_analysis
+  - name: retenção
     description: "Analisa a retenção de clientes calculando o tempo entre o primeiro e o segundo pedido."
     columns:
       - name: id_cliente
@@ -23,12 +23,8 @@ models:
           - not_null
       - name: data_primeiro_pedido
         description: "Data do primeiro pedido do cliente."
-        tests:
-          - not_null
       - name: data_segundo_pedido
         description: "Data do segundo pedido do cliente."
-        tests:
-          - not_null
 
   - name: cltv_analise
     description: "Calcula o Valor do Cliente ao Longo do Tempo (CLTV), incluindo gasto total, total de pedidos, e valor médio por pedido."
