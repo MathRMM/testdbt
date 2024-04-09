@@ -22,5 +22,5 @@ SELECT
     hc.gasto_total,
     hc.gasto_total / hc.total_pedidos AS valor_medio_pedido,
     CURRENT_DATE - hc.data_primeira_compra AS dias_cliente
-FROM {{ source('testdbt', 'clientes') }} c
-JOIN historico_compras hc ON c.id_cliente = hc.id_cliente
+FROM {{ source('testdbt', 'clientes') }} AS c
+INNER JOIN historico_compras AS hc ON c.id_cliente = hc.id_cliente
