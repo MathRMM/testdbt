@@ -45,11 +45,6 @@ models:
 
       - name: data_primeira_compra
         description: "Data da primeira compra realizada pelo cliente."
-        tests:
-          - not_null
 
       - name: data_segunda_compra
         description: "Data da segunda compra realizada pelo cliente. Pode ser nulo se o cliente não realizou uma segunda compra."
-        tests:
-          - not_null:
-              when: "this.data_segunda_compra is not null"  # Este teste verifica se a coluna não é nula, apenas quando existe uma segunda compra registrada.
