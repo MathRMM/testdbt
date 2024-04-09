@@ -6,9 +6,11 @@ CONFIGURAR ESSE BANCO
 
 Hostname: dpg-co9l3pa0si5c739ef67g-a.oregon-postgres.render.com
 
-Password: r1vfKU7wLA1BzqtnHmyn4QU8VS7rnYnU
+Port: 5432
 
-Username: testdb_xr34_user
+User: testdb_xr34_user
+
+Password: r1vfKU7wLA1BzqtnHmyn4QU8VS7rnYnU
 
 Database: testdb_xr34
 
