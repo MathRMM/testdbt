@@ -48,4 +48,3 @@ models:
 
       - name: data_segunda_compra
         description: "Data da segunda compra realizada pelo cliente. Pode ser nulo se o cliente não realizou uma segunda compra."
-         
