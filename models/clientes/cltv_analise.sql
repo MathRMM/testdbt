@@ -1,5 +1,3 @@
--- models/cltv_analise.sql
-
 {{ config(materialized='table') }}
 
 WITH historico_compras AS (

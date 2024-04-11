@@ -28,6 +28,10 @@ models:
 
   - name: cltv_analise
     description: "Calcula o Valor do Cliente ao Longo do Tempo (CLTV), incluindo gasto total, total de pedidos, e valor médio por pedido."
+    tests:
+      - relationships:
+          to: ref('clientes')
+          field: id_cliente
     columns:
       - name: id_cliente
         description: "Identificador único do cliente."
