@@ -1,5 +1,3 @@
--- models/clientes_ativos_por_mes.sql
-
 SELECT
     DATE_TRUNC('month', p.data_pedido) AS mes,
     COUNT(DISTINCT p.id_cliente) AS clientes_ativos

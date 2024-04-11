@@ -1,4 +1,3 @@
--- models/analise_retencao_clientes.sql
 {{ config(materialized="incremental", unique_key="id_cliente") }}
 
 with

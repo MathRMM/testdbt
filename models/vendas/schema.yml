@@ -33,7 +33,7 @@ models:
         description: "Quantidade de produtos disponíveis em estoque."
         tests:
           - not_null
-          
+
   - name: analise_retencao_clientes
     description: "Este modelo incrementa a análise da retenção de clientes, identificando a data da primeira e da segunda compra para cada cliente."
     columns:

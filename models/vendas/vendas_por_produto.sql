@@ -1,5 +1,3 @@
--- models/vendas_por_produto.sql
-
 {{ config(materialized='table') }}
 
 WITH detalhes_vendas AS (
