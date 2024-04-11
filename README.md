@@ -2,16 +2,9 @@ Welcome to your new dbt project!
 
 ### Using the starter project
 
-### PARA USAR O DBT UTILIZE ESSE BANCO JÁ POPULADO
-
-- Hostname: dpg-co9l3pa0si5c739ef67g-a.oregon-postgres.render.com
-- Port: 5432
-- User: testdb_xr34_user
-- Password: r1vfKU7wLA1BzqtnHmyn4QU8VS7rnYnU
-- Database: testdb_xr34
-- Schema: testdbt_curated
-
 Try running the following commands:
+- pip install dbt
+- bash init.sh
 - dbt run
 - dbt test
 
